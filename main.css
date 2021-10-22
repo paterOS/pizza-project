@@ -1,0 +1,314 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Varela Round', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(248, 244, 234);
+}
+
+body {
+    background-image: url(./img/pizza.jfif);
+    background-size: 150vw auto;
+    background-color: rgba(20, 16, 12, 0.712);
+    background-blend-mode: darken;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    color: rgb(240, 240, 240);
+}
+
+header {
+    height: 120px;
+    padding-left: 40px;
+    display: flex;
+    justify-content: flex;
+    align-items: center;
+}
+
+header h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 50px;
+    text-shadow: 2px 2px 4px black;
+
+}
+
+main {
+    position: relative;
+}
+
+
+.logo {
+    width: auto;
+    height: 90px;
+    
+}
+
+.form {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.form-pizza {
+    position: relative;
+    background-color: rgba(243, 243, 243, 0.1);
+    backdrop-filter: blur(30px);
+    border-style: solid;
+    border-width: 1px 0 0 1px;
+    border-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 10px 4px 20px 5px rgba(0, 0, 0, 0.5), inset 1px 1px 4px rgba(255, 255, 255, .3);
+    border-radius: 15px;
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.form-pizza h2 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: rgb(250, 190, 111);
+}
+
+#choose-pizza {
+    color: #181818;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    padding: 0 1em 0 0;
+    margin: 0;
+    width: 100%;
+    font-size: inherit;
+    outline: none;
+    width: 200px;
+    padding: 5px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+.sauses-container, .drinks-container{
+    margin: 10px;
+    position: relative;
+    cursor: pointer
+}
+
+input[type="checkbox"], input[type="radio"] {
+    position: absolute;
+    display: none;
+}
+
+input[type="checkbox"] + span:before {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 8px 0 0;
+  vertical-align: middle;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+  font: bold 18px/7px Verdana, sans-serif;
+  color: #ac1b1b;
+  transition: .3s ease-in-out;
+}
+
+input[type="checkbox"]:checked + span:before {
+    content: "✓";
+    border-color: rgba(255, 255, 255, 0);
+    transition: .3s ease-in-out;
+}
+  
+input[type="radio"] + span:before {
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 8px 0 0;
+    vertical-align: middle;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 100%;
+    transition: .2s ease-in-out;
+}
+  
+input[type="radio"]:checked + span:before {
+    content: "";
+    background: #ac1b1b;
+    border-color: #ac1b1b;
+    box-shadow: inset 0 0 1px 2px #ac1b1b;
+    transition: 0.1s;
+}
+
+.user-label {
+    padding: 0 3rem;
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-data, #message {
+    color: #e7e7e7;
+    border-radius: 7px;
+    border-style: none;
+    margin: 5px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.user-data {
+    width: 65%;
+    padding: 5px;
+}
+
+#message {
+    width: 60%;
+    resize: none;
+    padding: 10px;
+}
+
+#message::placeholder, .user-data::placeholder {
+    color: #b3b3b3;
+}
+
+#message:active, .user-data:active {
+    color: rgb(66, 66, 66);
+    
+}
+
+#message:focus, .user-data:focus {
+    outline-style: solid;
+    outline-width: 2px;
+    outline-color: rgba(0, 0, 0, 0.103);
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.301);
+    transition: .1s ease-in;
+}
+
+
+.btn {
+    background-color: #ac1b1b;
+    font-size: 15px;
+    font-weight: bold;
+    width: 100px;
+    border-radius: 15px;
+    border-style: none;
+    transition: 0.4s;
+    cursor: pointer;
+}
+#order-btn {
+    background-color: #ac1b1b;
+    color: rgb(236, 236, 236);
+    height: 30px;
+    margin: 20px;
+
+}
+
+.btn:hover {
+    background-color: #c70000;
+    transform: translateY(-5px);
+    box-shadow: 2px 5px 5px rgb(36, 36, 36);
+}
+
+.btn:active {
+    transform: translateY(-2px);
+    transition: 0.1s;
+    box-shadow: 1px 3px 3px rgb(36, 36, 36);
+}
+
+
+.bill {
+    display: none;
+    /* display: flex; */
+    padding: 80px 20px;
+    align-items: center;
+    flex-direction: column;
+    content: '';
+    background-color: rgba(241, 241, 241, .6);
+    backdrop-filter: blur(10px);
+    box-shadow: 5px 2px 6px 3px rgba(0, 0, 0, 0.253);
+    border-radius: 10px;
+    color: black;
+    position: absolute;
+    width: 30vw;
+    height: 80vh;
+    top: 50vh;
+    left: 50vw;
+    transform: translateX(-50%) translateY(-65%);
+}
+
+
+.bill h2 {
+    margin: 10px 0;
+}
+
+.bill p:first-child {
+    font-size: 1.3rem;
+    color: #027c1d;
+    font-weight: bolder;
+    margin-bottom: 15px;
+}
+
+.text-contain {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+
+.msg-contain {
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.msg-contain span {
+    font-size: 1rem;
+}
+.text-contain p .bold {
+    font-size: 0.5rem;
+}
+
+
+.bold {
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.bold span {
+    font-weight: normal;
+}
+
+.price-sum {
+    font-size: 2.2rem;
+    color: #027c1d;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.btns {
+    display: flex;
+}
+
+.back-btn {
+    background-color: rgb(236, 236, 236);;
+    position: absolute;
+    left: 40px;
+    bottom: 20px;
+    width: 200px;
+    height: 40px;
+}
+
+.back-btn:hover {
+   background-color: rgb(214, 214, 214);
+}
+
+.confirm-btn {
+    color: rgb(248, 244, 234);
+    right: 40px;
+    bottom: 20px;
+    position:absolute;
+    height: 40px;
+}
+

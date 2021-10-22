@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div>
+            <a href="./index.html"><img class="logo" src="./img/logo.png" alt="logo"></a>
+        </div>
+        <a href="./index.html">
+            <h1>Bella Ciao</h1>
+        </a>
+    </header>
+    <main>
+        <form class="form">
+            <fieldset class="form-pizza">
+                <h2>Wybierz pizzę</h2>
+                <select name="pizza" id="choose-pizza">
+                    <option value="0"></option>
+                    <option value="1">El Profesore</option>
+                    <option value="2">Tokyo</option>
+                    <option value="3">Berlin</option>
+                    <option value="4">Nairobi</option>
+                    <option value="5">Denver</option>
+                    <option value="6">Lisbon</option>
+                    <option value="7">Rio</option>
+                </select>
+
+                <h2>Wybierz sos</h2>
+                <div class="sauses">
+
+                    <label for="ketchup" class="sauses-container">
+                        <input class="sause" id="ketchup" type="checkbox" name="checkbox" value="s1">
+                        <span>ketchup</span>
+                    </label>
+
+
+                    <label for="tysiaca" class="sauses-container">
+                        <input class="sause" id="tysiaca" type="checkbox" name="checkbox" value="s2">
+                        <span>tysiąca wysp</span>
+                    </label>
+
+                    <label for="czosnek" class="sauses-container">
+                        <input class="sause" id="czosnek" type="checkbox" name="checkbox" value="s3">
+                        <span>czosnkowy</span>
+                    </label>
+
+
+                    <label for="ostry" class="sauses-container">
+                        <input class="sause" id="ostry" type="checkbox" name="checkbox" value="s5">
+                        <span>ostry</span>
+                    </label>
+                </div>
+                <h2>Wybierz napój</h2>
+                <div class="drinks">
+                    <label for="cola" class="drinks-container">
+                        <input class="drink" id="cola" type="radio" name="checkbox" value="n1">
+                        <span>Coca Cola</span>
+                    </label>
+
+                    <label for="fanta" class="drinks-container">
+                        <input class="drink" id="fanta" type="radio" name="checkbox" value="n2">
+                        <span>Fanta</span>
+                    </label>
+                </div>
+
+                <h2>Podaj swoje dane</h2>
+                <label class="user-label" for="name">
+                    <span>Imię i nazwisko</span>
+                    <input class="user-data" id="name" type="text" name="name" placeholder="Podaj imię i nazwisko">
+                </label>
+
+                <label class="user-label" for="mail">
+                    <span>Adres e-mail</span>
+                    <input class="user-data" id="mail" type="email" name="email" placeholder="Podaj e-mail">
+                </label>
+
+                <label class="user-label" for="phone">
+                    <span>Nr telefonu</span>
+                    <input class="user-data" id="phone" type="text" name="phone" placeholder="Podaj Nr telefonu">
+                </label>
+                <label class="user-label" for="adress">
+                    <span>Adres dostawy</span>
+                    <input class="user-data" id="adress" type="text" name="adress" placeholder="Podaj adres dostawy">
+                </label>
+                <textarea name="textarea" id="message" cols="30" rows="10" placeholder="Napisz wiadomość"></textarea>
+                <button class="btn" id="order-btn" type="submit" value="Zamów">Zamów</button>
+            </fieldset>
+        </form>
+
+        <section class="bill">
+            <p>Dziękujemy za zamówienie!</p>
+            <h2>Twoje zamówienie:</h2>
+            <p class="your-pizza text-contain">
+                <p class="pizza-price"></p>
+            </p>
+            <p class="your-sauses text-contain">
+                <p class="sause-price"></p>
+            </p>
+            <p class="your-drink text-contain">
+                <p class="drink-price"></p>
+            </p>
+            <p class="your-data text-contain msg-contain">
+                <span class="bold">Imię i nazwisko: <span class="name-target"></span></span>
+                <span class="bold">e-mail: <span class="mail-target"></span></span>
+                <span class="bold">tel: <span class="nr-target"></span></span>
+                <span class="bold">adres dostawy: <span class='adress-target'></span></span>
+                <span class="bold">Wiadomość: </span><span class="msg-target"></span>
+            </p>
+            <p class="price-sum"><span>Razem: </span>45 zł</p>
+
+            <button class="btn back-btn">Wróc do zamówienia</button>
+            <button class="btn confirm-btn">Potwierdź</button>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="./main.js"></script>
+</body>
+
+</html>
